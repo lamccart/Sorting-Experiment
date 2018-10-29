@@ -14,7 +14,7 @@ import java.util.*;
  * @since 10/28/2018
  */
 
-public class SortsTest {
+public class SortsTester {
 
     private static final int ARRAY_SIZE = 10;
     private static final int LAST_TWO = 2;
