@@ -1,9 +1,28 @@
+/*
+ * NAME: Liam McCarthy
+ * PID: A14029718
+ */
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.*;
 
+/**
+ * Sorting algorithms for insertion, merge, and quick sorts as well as helper methods in order to do so
+ *
+ * @author Liam McCarthy
+ * @since 10/28/2018
+ */
+
 public class Sorts {
 
+    /**
+     * This method implements an insertion sort to sort a list of pairs increasing by their count.
+     *
+     * @param list A list of pairs that are to be sorted
+     * @param startIndex Index of the list to start on (Inclusive)
+     * @param endIndex Index of list to end on (Exclusive)
+     */
     public static void insertionSort(ArrayList<Pair> list, int startIndex, int endIndex) {
         int j;
 
@@ -20,6 +39,13 @@ public class Sorts {
         }
     }
 
+    /**
+     * This method implements a merge sort to sort a list of pairs increasing by their count.
+     *
+     * @param list A list of pairs that are to be sorted
+     * @param startIndex Index of the list to start on (Inclusive)
+     * @param endIndex Index of list to end on (Exclusive)
+     */
     public static void mergeSort(ArrayList<Pair> list, int startIndex, int endIndex) {
 
         int i;
@@ -36,8 +62,16 @@ public class Sorts {
         }
     }
 
+    /**
+     * This method implements a helper method in order to merge all of the split lists from mergeSort
+     *
+     * @param list A list of pairs that are to be sorted
+     * @param startIndex Index of the list to start on (Inclusive)
+     * @param i The middle index that the list is split by
+     * @param endIndex Index of list to end on (Exclusive)
+     */
     private static void merge(ArrayList<Pair> list, int startIndex, int i, int endIndex) {
-        int mergedSize = endIndex - i + 1;             // Size of merged partition
+        int mergedSize = endIndex - startIndex + 1;             // Size of merged partition
         int mergePos = 0;                         // Position to insert merged number
         int leftPos;                      // Position of elements in left partition
         int rightPos;                        // Position of elements in right partition
@@ -79,7 +113,13 @@ public class Sorts {
         }
     }
 
-
+    /**
+     * This method implements a quick sort to sort a list of pairs increasing by their count.
+     *
+     * @param list A list of pairs that are to be sorted
+     * @param startIndex Index of the list to start on (Inclusive)
+     * @param endIndex Index of list to end on (Exclusive)
+     */
     public static void quickSort(ArrayList<Pair> list, int startIndex, int endIndex) {
 
         // Base case: If there are 1 or zero elements to sort,
@@ -98,6 +138,13 @@ public class Sorts {
         quickSort(list, i + 1, endIndex);
     }
 
+    /**
+     * This method implements a partition for the quick sort for each half.
+     *
+     * @param list A list of pairs that are to be sorted
+     * @param i Index of the list to start on (Inclusive)
+     * @param k Index of list to end on (Exclusive)
+     */
     private static int partition(ArrayList<Pair> list, int i, int k) {
         /* Initialize variables */
 
@@ -116,7 +163,7 @@ public class Sorts {
             }
 
             /* Decrement h while pivot < numbers[h] */
-            while (pivot < list.get(lo).getCount()) {
+            while (pivot < list.get(hi).getCount()) {
                 hi--;
             }
             /* If there are zero or one items remaining, all numbers are partitioned. Return h */

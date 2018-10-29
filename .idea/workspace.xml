@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64943ce3-668c-4ddc-92e7-82dc04d84f69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/LargeNames.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MRUList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MediumNames.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PrideAndPrejudice.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RuntimeExplorer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SmallNames.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Sorts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA4/RuntimeExplorer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PA4/RuntimeExplorer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA4/SortsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PA4/SortsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RuntimeExplorer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RuntimeExplorer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortsTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,34 +20,35 @@
     <session id="-1523926866">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="9" />
-          <entry key="txt" value="3" />
+          <entry key="java" value="12" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="9" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="JAVA" value="12" />
+          <entry key="PLAIN_TEXT" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3506" />
+          <entry key="java" value="7176" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3506" />
+          <entry key="JAVA" value="7176" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -61,9 +59,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RuntimeExplorer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="290">
+              <caret line="84" column="43" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
               <folding>
+                <element signature="e#0#14172#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -71,11 +70,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SmallNames.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105345">
+              <caret line="7023" selection-start-line="7023" selection-end-line="7023" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sorts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1920">
-              <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
+            <state relative-caret-position="234">
+              <caret line="165" selection-start-line="165" selection-end-line="165" />
               <folding>
+                <element signature="e#0#6251#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -85,9 +94,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SortsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+            <state relative-caret-position="866">
+              <caret line="207" column="60" selection-start-line="207" selection-start-column="60" selection-end-line="207" selection-end-column="60" />
               <folding>
+                <element signature="e#0#8587#0" expanded="true" />
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
@@ -126,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,6 +152,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -150,7 +160,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540770307332" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540795553137" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -186,6 +196,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SortsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PA4" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SortsTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SortsTest.testInsertionSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA4" />
       <option name="PACKAGE_NAME" value="" />
@@ -199,10 +217,12 @@
     <list>
       <item itemvalue="Application.RuntimeExplorer" />
       <item itemvalue="JUnit.SortsTest.testInsertionSort" />
+      <item itemvalue="JUnit.SortsTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.RuntimeExplorer" />
+        <item itemvalue="JUnit.SortsTest" />
         <item itemvalue="JUnit.SortsTest.testInsertionSort" />
       </list>
     </recent_temporary>
@@ -221,15 +241,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SortsTest_testInsertionSort - 2018.10.28 at 16h 39m 17s.xml">
-      <configuration name="SortsTest.testInsertionSort" configurationId="JUnit" />
+    <history-entry file="SortsTest - 2018.10.28 at 22h 54m 47s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 22h 55m 10s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 22h 55m 33s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 22h 57m 34s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 22h 58m 52s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 23h 00m 02s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 23h 01m 17s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 23h 02m 39s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 23h 02m 52s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SortsTest - 2018.10.28 at 23h 03m 00s.xml">
+      <configuration name="SortsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="672" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25767368" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -238,7 +285,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.32931036" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.32931036" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -291,13 +338,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SmallNames.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LargeNames.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -311,28 +351,51 @@
     <entry file="file://$PROJECT_DIR$/src/PrideAndPrejudice.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MRUList.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        <state relative-caret-position="114">
+          <caret line="496" selection-start-line="496" selection-end-line="496" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sorts.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="128" column="20" selection-start-line="128" selection-start-column="20" selection-end-line="128" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="121">
+          <caret line="447" selection-start-line="447" selection-end-line="447" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MRUList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SortsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        <state relative-caret-position="866">
+          <caret line="207" column="60" selection-start-line="207" selection-start-column="60" selection-end-line="207" selection-end-column="60" />
           <folding>
+            <element signature="e#0#8587#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SmallNames.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105345">
+          <caret line="7023" selection-start-line="7023" selection-end-line="7023" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sorts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="165" selection-start-line="165" selection-end-line="165" />
+          <folding>
+            <element signature="e#0#6251#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -340,9 +403,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/RuntimeExplorer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="290">
+          <caret line="84" column="43" selection-start-line="84" selection-start-column="43" selection-end-line="84" selection-end-column="43" />
           <folding>
+            <element signature="e#0#14172#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>

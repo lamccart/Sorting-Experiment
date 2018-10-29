@@ -1,7 +1,12 @@
+/*
+ * NAME: Liam McCarthy
+ * PID: A14029718
+ */
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.*;
 import java.io.IOException;
-
 
 /**
  * This class will explore the runtime of the method getNameCounts, and compare the performance
@@ -19,6 +24,14 @@ public class RuntimeExplorer {
     //Constant numbers used for testing
     static int testStartSize = 5000;
     static int testTimes = 3;
+    static int smallTestTimes = 2;
+
+    //Constants for testing sort
+    static int smallestNumPairs = 1000;
+    static int smallNumPairs = 2000;
+    static int midNumPairs = 3000;
+    static int largeNumPairs = 4000;
+    static int largestNumPairs = 5000;
 
     // Then other non-constant variables, specify their meaning when necessary
     static String prideAndPrejudice = "./src/PrideAndPrejudice.txt";
@@ -39,12 +52,41 @@ public class RuntimeExplorer {
      */
     public static void main(String [] args) {
 
-        printRunTime("LinkedList", smallNames, testStartSize, testStartSize, testTimes, testTimes);
-        printRunTime("MRUList", smallNames, testStartSize, testStartSize, testTimes, testTimes);
-        printRunTime("LinkedList", mediumNames, testStartSize, testStartSize, testTimes, testTimes);
-        printRunTime("MRUList", mediumNames, testStartSize, testStartSize, testTimes, testTimes);
-        printRunTime("LinkedList", largeNames, testStartSize, testStartSize, testTimes, testTimes);
-        printRunTime("MRUList", largeNames, testStartSize, testStartSize, testTimes, testTimes);
+        printRunTime("LinkedList", smallNames, testStartSize, testStartSize, testTimes, smallTestTimes);
+        printRunTime("MRUList", smallNames, testStartSize, testStartSize, testTimes, smallTestTimes);
+        printRunTime("LinkedList", mediumNames, testStartSize, testStartSize, testTimes, smallTestTimes);
+        printRunTime("MRUList", mediumNames, testStartSize, testStartSize, testTimes, smallTestTimes);
+        printRunTime("LinkedList", largeNames, testStartSize, testStartSize, testTimes, smallTestTimes);
+        printRunTime("MRUList", largeNames, testStartSize, testStartSize, testTimes, smallTestTimes);
+
+        //Getting all the names from largeNames and words from Pride and Prejudice
+        AbstractList<String> allLargeNames = readNames(largeNames, "LinkedList");
+        ArrayList<String> allWords = readWords(prideAndPrejudice, 0, true);
+        ArrayList<Pair> namesCount = getNameCounts(allLargeNames, allWords);
+        //Printing tests for insertion sort
+        printSortsTime(deepCopyArrayList(namesCount), "InsertionSort", smallestNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "InsertionSort", smallNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "InsertionSort", midNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "InsertionSort", largeNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "InsertionSort", largestNumPairs, testTimes);
+        //Printing tests for merge sort
+        printSortsTime(deepCopyArrayList(namesCount), "MergeSort", smallestNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "MergeSort", smallNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "MergeSort", midNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "MergeSort", largeNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "MergeSort", largestNumPairs, testTimes);
+        //Printing tests for quick sort
+        printSortsTime(deepCopyArrayList(namesCount), "QuickSort", smallestNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "QuickSort", smallNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "QuickSort", midNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "QuickSort", largeNumPairs, testTimes);
+        printSortsTime(deepCopyArrayList(namesCount), "QuickSort", largestNumPairs, testTimes);
+
+        //Finding the three main characters
+        AbstractList<String> allSmallNames = readNames(smallNames, "LinkedList");
+        ArrayList<Pair> allNamesCount = getNameCounts(allSmallNames, allWords);
+        Sorts.insertionSort(allNamesCount, 0, allNamesCount.size());
+        printCharacterQuestion(allNamesCount);
 
     }
 
@@ -58,6 +100,7 @@ public class RuntimeExplorer {
      */
     public static AbstractList<String> readNames(String fileName, String listType){
 
+        //Check to see which list type to use
         AbstractList<String> allNames;
         if(listType.equals("LinkedList")){
             allNames = new LinkedList<>();
@@ -66,15 +109,20 @@ public class RuntimeExplorer {
         }else{
             allNames = new ArrayList<>();
         }
+        //Scan through the given file
         try {
             Scanner sc = new Scanner(new File(fileName));
+            //Checks if file has next line
             while (sc.hasNextLine()) {
                 String newLine = sc.nextLine();
+                //Split line into words
                 String[] splitLine = newLine.split("\\s+");
+                //Add all the words to allNames
                 Collections.addAll(allNames, splitLine);
             }
             sc.close();
         }
+        //If file isn't found throw exception
         catch (IOException e) { // If the given file doesn’t exist
             System.out.println("File not found!");
         }
@@ -93,20 +141,27 @@ public class RuntimeExplorer {
      */
     public static ArrayList<String> readWords(String fileName, int numWords, boolean readAll){
 
+        //Read the given file
         ArrayList<String> allNames = new ArrayList<>();
         try {
             Scanner sc = new Scanner(new File(fileName));
+            //Check if we have to read the file
             if(readAll){
                 while (sc.hasNextLine()) {
                     String newLine = sc.nextLine();
+                    //Read split the line into words
                     String[] splitLine = newLine.replaceAll("\\p{P}", "").split("\\s+");
+                    //Add the words to allNames
                     Collections.addAll(allNames, splitLine);
                 }
             }else{
                 int counter = numWords;
+                //Check if we need more words
                 while (counter > 0) {
                     String newLine = sc.nextLine();
+                    //Split line into words
                     String[] splitLine = newLine.replaceAll("\\p{P}", "").split("\\s+");
+                    //Add the words to allNames if we still need them
                     for (String word : splitLine) {
                         if (counter > 0) {
                             allNames.add(word);
@@ -120,6 +175,7 @@ public class RuntimeExplorer {
 
             sc.close();
         }
+        //If the file doesn't exist throw exception
         catch (IOException e) { // If the given file doesn’t exist
             System.out.println("File not found!");
         }
@@ -141,9 +197,12 @@ public class RuntimeExplorer {
                                                 ArrayList<String> words) {
         ArrayList<Pair> nameCounts = new ArrayList<>();
         ArrayList<String> usedNames = new ArrayList<>();
+        //For every name check if it's used
         for(String name : names){
             if(!usedNames.contains(name)){
+                //Make a pair for the name and the number of times it occurs
                 Pair newPair = new Pair(name, Collections.frequency(words, name));
+                //Update lists with new pair
                 nameCounts.add(newPair);
                 usedNames.add(name);
             }
@@ -169,11 +228,14 @@ public class RuntimeExplorer {
         System.out.println("Class: " + listType + " (" + fileName + ")");
         System.out.println("=================================");
 
+        //Read names from name file and words from Pride and Prejudice
         AbstractList<String> namesList = readNames(fileName, listType);
         ArrayList<String> wordsList = readWords(prideAndPrejudice, startSize, false);
         int currentSize = startSize;
 
+        //Runs through number of tests
         for(int i = 1; i <= numTest; i++){
+            //Does a certain number of trials and takes the average run time
             long[] testTimes = new long[eachTestTimes];
             for(int j = 0; j < eachTestTimes; j++){
                 long startTime = System.currentTimeMillis();
@@ -220,18 +282,60 @@ public class RuntimeExplorer {
         
         long totalTime = 0;
 
+
         System.out.println("Sorting nameCounts using " + sortAlg);
 
-        // Example of how to time your program in nanoseconds
+        long[] tests = new long[testTimes];
 
-        long startTime = System.nanoTime();
+        //Check which sorting algorithm to use
+        if(sortAlg.equals("InsertionSort")){
+            //Loops for the number of tests
+            for(int i = 0; i < testTimes; i++){
+                //Checks how long sort of the name counts takes
+                long startTime = System.nanoTime();
 
-        // TODO: The program that you time goes here
+                Sorts.insertionSort(namesCount, 0, numPairs);
 
-        long endTime = System.nanoTime();
-        totalTime = endTime - startTime;
+                long endTime = System.nanoTime();
+                totalTime = endTime - startTime;
+                //Added to list of trials
+                tests[i] = totalTime;
+            }
+        }else if(sortAlg.equals("MergeSort")){
+            //Loops through number of trials
+            for(int i = 0; i < testTimes; i++){
+                //Check how long sort take
+                long startTime = System.nanoTime();
 
-        System.out.println(sortAlg + " takes " + totalTime + " nanoseconds to sort " + numPairs +
+                Sorts.mergeSort(namesCount, 0, numPairs);
+
+                long endTime = System.nanoTime();
+                totalTime = endTime - startTime;
+                //Added to list of trials
+                tests[i] = totalTime;
+            }
+        }else{
+            //Loops for number of trials
+            for(int i = 0; i < testTimes; i++){
+                //Sees how long the sort takes
+                long startTime = System.nanoTime();
+
+                Sorts.quickSort(namesCount, 0, numPairs);
+
+                long endTime = System.nanoTime();
+                totalTime = endTime - startTime;
+                //Add it to the list of trials
+                tests[i] = totalTime;
+            }
+        }
+        //Average the results of each trial
+        long sum = 0;
+        for(long time: tests){
+            sum += time;
+        }
+        long avgTime = sum / testTimes;
+
+        System.out.println(sortAlg + " takes " + avgTime + " nanoseconds to sort " + numPairs +
                            " pairs in nameCounts\n");
     }
 
@@ -240,7 +344,7 @@ public class RuntimeExplorer {
      *
      * @param old the given old ArrayList
      */
-    private ArrayList<Pair> deepCopyArrayList(ArrayList<Pair> old) {
+    private static ArrayList<Pair> deepCopyArrayList(ArrayList<Pair> old) {
         ArrayList<Pair> copy = new ArrayList<Pair>(old.size());
         for (Pair i : old){
             copy.add(new Pair(i.getName(), i.getCount()));
@@ -255,10 +359,9 @@ public class RuntimeExplorer {
      * @param sorted a sorted LinkedList of Pair, which contains names with count of each name.
      */
     public static void printCharacterQuestion(ArrayList<Pair> sorted) {
-        // TODO: change the variables below to proper value
-        String mainChar = "";
-        String secondChar = "";
-        String thirdChar = "";
+        String mainChar = sorted.get(0).getName();
+        String secondChar = sorted.get(1).getName();
+        String thirdChar = sorted.get(2).getName();
 
         System.out.println("In Pride and Prejudice: ");
         System.out.println("The main character is " + mainChar);
